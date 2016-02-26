@@ -36,12 +36,12 @@ process.stdin.on('keypress', function(ch, key) {
         velocity.right += 5;
         robot.drive(velocity);
         console.log("moved right");
-        //turnRightDegrees(10);
     } else if (key.name == 'a') {
         velocity.left += 5;
         velocity.right -= 5;
         robot.drive(velocity);
         console.log("moved left");
+        //turnRightDegrees(10);
         //turnLeftDegrees(10);
     } else if (key.name == 'space') {
         console.log("stop me");
