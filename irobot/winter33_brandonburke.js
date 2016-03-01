@@ -22,8 +22,8 @@ process.stdin.on('keypress', function(ch, key) {
     if (key.name == 'w') {
         console.log("moved up");
         //up(10);
-        velocity.left += 10;
-        velocity.right += 10;
+        velocity.left += 50;
+        velocity.right += 50;
         robot.drive(velocity);
         //robot.rtsTrue();
     } else if (key.name == 's') {
@@ -37,8 +37,8 @@ process.stdin.on('keypress', function(ch, key) {
         robot.drive(velocity);
         console.log("moved right");
     } else if (key.name == 'a') {
-        velocity.left += 5;
-        velocity.right -= 5;
+        velocity.left += 50;
+        velocity.right -= 50;
         robot.drive(velocity);
         console.log("moved left");
         //turnRightDegrees(10);
@@ -60,30 +60,38 @@ process.stdin.on('keypress', function(ch, key) {
     } else if (key.name == 'q') {
         console.log("play song");
         mysong = [
-            [174, 700],
-            [349, 300],
-            [261, 300],
-            [220, 300],
-            [246, 300],
-            [196, 1000],
-            [174, 700],
-            [349, 300],
-            [293, 300],
-            [261, 300],
-            [220, 300],
-            [261, 1000],
-            [293, 300],
-            [275, 300],
-            [293, 300],
-            [220, 300],
-            [246, 300],
-            [261, 300],
-            [293, 700],
-            [246, 300],
-            [196, 1000]
+            [587, 900],
+            [587, 250],
+            [523, 250],
+            [523, 200],
+            [587, 200],
+            [523, 200],
+            [440, 200],
+            [349, 200],
+            [440, 200],
+            [261, 200],
+            [220, 200],
+            [261, 200],
+            [440, 500],
+            [698, 200],
+            [659, 200],
+            [698, 200],
+            [587, 200],
+            [523, 200],
+            [587, 200],
+            [523, 200],
+            [440, 200],
+            [349, 200],
+            [440, 200],
+            [698, 200],
+            
 
         ];
         robot.sing(mysong);
+        console.log("moved up")
+        velocity.left += 50;
+        velocity.right += 50;
+        robot.drive(velocity);
     }
 
 
