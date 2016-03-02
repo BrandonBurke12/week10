@@ -61,37 +61,71 @@ process.stdin.on('keypress', function(ch, key) {
         console.log("play song");
         mysong = [
             [587, 900],
-            [587, 250],
-            [523, 250],
-            [523, 200],
-            [587, 200],
-            [523, 200],
-            [440, 200],
-            [349, 200],
-            [440, 200],
-            [261, 200],
-            [220, 200],
-            [261, 200],
-            [440, 500],
+            [587, 450],
+            [523, 450],
+            [523, 400],
+            [587, 400],
+            [523, 400],
+            [440, 400],
+            [349, 400],
+            [440, 400],
+            [261, 400],
+            [220, 400],
+            [261, 400],
+            [440, 400],
+            [698, 400],
+            [659, 400],
+            [698, 400],
+            [587, 400],
+            [523, 400],
+            [587, 400],
+            [523, 400],
+            [440, 400],
+            [349, 400],
+            [440, 400],
             [698, 200],
-            [659, 200],
+            [598, 200],
             [698, 200],
-            [587, 200],
-            [523, 200],
-            [587, 200],
-            [523, 200],
-            [440, 200],
-            [349, 200],
-            [440, 200],
+            [598, 200],
             [698, 200],
+            [598, 200],
+            [698, 200],
+            [598, 200]
             
-
         ];
         robot.sing(mysong);
-        console.log("moved up")
-        velocity.left += 50;
-        velocity.right += 50;
-        robot.drive(velocity);
+
+        setTimeout(function(){robot.drive({left: 1000, right: 1000});},0)
+
+        setTimeout(function(){robot.drive({left: 1000, right: -1000});},2000)
+
+        setTimeout(function(){robot.drive({left: 1000, right: 1000});},3500)
+
+        setTimeout(function(){robot.drive({left: 1000, right: -1000});},5000)
+
+        setTimeout(function(){robot.drive({left: 1000, right: 1000});},6000)
+
+        setTimeout(function(){robot.drive({left: -1000, right: -1000});},7000)
+
+        setTimeout(function(){robot.drive({left: 1000, right: 1000});},7500)
+
+        setTimeout(function(){robot.drive({left: 1000, right: -1000});},8000)
+
+        // setTimeout(function() {
+        //                 socket.emit('drive', {left: 50, right: 50});
+        //             }, 0);
+
+        // setTimeout(function() {
+        //                 socket.emit('drive', {left:-50, right: 50});
+        //             }, 1000);
+
+        // setTimeout(function() {
+        //                 socket.emit('drive', {left: 50, right: 50});
+        //             }, 3000);
+
+        // setTimeout(function() {
+        //                 socket.emit('drive', {left: 0, right: 0});
+        //             }, 5000);
     }
 
 
